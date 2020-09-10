@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@keyframes example {
+	from {left: 100%;}
+	to {left: 0%;}
+}
+
+/* youtube system stuff */
+yt-live-chat-header-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-message-input-renderer {
+	display: none !important;
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items,
+yt-live-chat-item-list-renderer #item-scroller{
+	overflow: hidden !important;
+}
+
+/* fundo transparente */
+body {
+	background-color: rgba(0,0,0,0);
+}
+
+yt-live-chat-renderer {
+	background-color: transparent !important;
+}
+
+/* reduz o espacamento lateral */
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+}
+
+yt-live-chat-paid-message-renderer #header {
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+}
+
+/* mensagens */
+yt-live-chat-renderer * {
+	font-family: "Roboto";
+	font-size: 18px !important;
+	line-height: 23px !important;
+}
+
+yt-live-chat-text-message-renderer {
+	/*background-color: #282828 !important;*/
+	background-color: #fff !important;
+	margin-top: 4px;
+	left: 0% !important;
+	animation-name: example !important;
+	animation-duration: 1s !important;
+	box-sizing: border-box !important;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#author-photo {
+	/*display: none !important;*/
+	margin-top: 2px !important;
+	/*margin-top: 2px !important;*/
+    /*imf width: 100% !important;
+    height: auto !important;*/
+}
+
+#message,
+#author-name,
+#author-name.owner.yt-live-chat-author-chip,
+#author-name.moderator.yt-live-chat-author-chip,
+#author-name.member.yt-live-chat-author-chip {
+    color: #000000 !important;
+}
+
+/* mensagem apagada */
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted] {
+	display: none !important;
+}
+
+#item-offset {
+	height: 100% !important;
+}
+
+#items.style-scope.yt-live-chat-item-list-renderer {
+	display: flex !important;
+	flex-direction: column-reverse !important;
+	top: 0 !important;
+	bottom: auto !important;
+}
